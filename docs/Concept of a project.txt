@@ -1,0 +1,14 @@
+
+
+	Goal: Create a site with will solve any problem using AI
+
+	How it will work: 
+	
+	
+		1) Person log in into website (or app) and type his goal with words(How it works in Google or Amazon) and the website gives returns a solution for as cheap as possible (Ideally free).
+
+		2) If the website cannot solve the task with it's own resources -> 
+It redirects it to a place where the problem can be solved.
+
+
+

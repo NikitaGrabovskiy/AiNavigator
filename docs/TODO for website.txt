@@ -1,0 +1,6 @@
+
+1. Create a git repo
+1. Add all the available coupons with service description
+1. Start to work on navigator right available
+1. Delete instances that I created earlier
+1.  
