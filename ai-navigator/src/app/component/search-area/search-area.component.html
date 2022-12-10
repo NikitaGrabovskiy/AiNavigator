@@ -1,8 +1,13 @@
-<p>
-<app-tool name="Da"></app-tool>
-<br>
-<app-tool></app-tool>
-<br>
-<app-tool></app-tool>
-<br>
-</p>
+<div>
+<div *ngFor="let tool of tools" style="color: rgb(18, 52, 63);
+background-color: bisque; border: blue;border: 1mm;">
+    Description: {{tool.description}}
+    Free: {{tool.free}}
+    generate:{{tool.generate}},
+    toolUrl:<a href="{{tool.toolUrl}}">{{tool.name}}</a>,
+    media:{{tool.media}},
+    editExisting:{{tool.editExisting}},
+    youtubeUrl:<a href="{{tool.youtubeUrl}}">link</a>
+</div>
+</div>
+

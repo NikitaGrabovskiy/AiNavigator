@@ -1,1 +1,34 @@
-<p>search-options-bar works!</p>
+
+
+<ul>
+    Select media type :
+    <br>
+    <input type="checkbox" (change)="onSelectingImage()">Image
+    <input type="checkbox" (change)="onSelectingSound()">Sound
+    <input type="checkbox" (change)="onSelectingText()">Text
+    <input type="checkbox" (change)="onSelectingVideo()">Video
+    <input type="checkbox" (change)="onSelectingOther()">Other
+</ul>
+<br>
+<br>
+<ul>
+    What are you trying to do?
+    <br>
+    <input type="checkbox" (change)="onSelectingGenerate()">Generate new content
+    <input type="checkbox" (change)="onSelectingEdit()">Edit existing
+</ul>
+<br>
+<br>
+  <input type="radio" id="Free" name="freeOptions" value="Free" (change)="onSelectingFree()">
+  <label for="free">Free</label><br>
+  <input type="radio" id="FreeVersionAvailable" name="freeOptions" value="FreeVersionAvailable" (change)="onSelectingFreeVersion()">
+  <label for="FreeVersionAvailable">FreeVersionAvailable</label><br>  
+  <input type="radio" id="All" name="freeOptions" value="All" (change)="onSelectingAll()">
+  <label for="All">All</label>
+
+  <br>
+  <br>
+  
+
+<app-search-area [tools]="tools"></app-search-area>
+
