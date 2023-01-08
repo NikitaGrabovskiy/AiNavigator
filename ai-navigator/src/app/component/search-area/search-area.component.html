@@ -1,13 +1,50 @@
+<style type="text/css">
+    .tg  {border-collapse:collapse;border-color:#9ABAD9;border-spacing:0;border-style:solid;border-width:1px;}
+    .tg td{background-color:#EBF5FF;border-color:#9ABAD9;border-style:solid;border-width:0px;color:#444;
+      font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{background-color:#409cff;border-color:#9ABAD9;border-style:solid;border-width:0px;color:#fff;
+      font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-7lxh{background-color:#ccf7f5;border-color:#ebf5ff;text-align:right;vertical-align:top;width: 50%;}
+    .tg .tg-1fm6{background-color:#c5f2ee;border-color:inherit;color:#00009b;font-size:16px;text-align:left;vertical-align:top}
+    .tg .tg-bltd{background-color:#ccf7f5;border-color:inherit;text-align:left;vertical-align:top}
+    .tg .tg-ibkn{background-color:#daf9f8;border-color:inherit;font-size:12px;text-align:left;vertical-align:top}
+    </style>
+
+
+
 <div>
-<div *ngFor="let tool of tools" style="color: rgb(18, 52, 63);
-background-color: bisque; border: blue;border: 1mm;">
-    Description: {{tool.description}}
-    Free: {{tool.free}}
-    generate:{{tool.generate}},
-    toolUrl:<a href="{{tool.toolUrl}}">{{tool.name}}</a>,
-    media:{{tool.media}},
-    editExisting:{{tool.editExisting}},
-    youtubeUrl:<a href="{{tool.youtubeUrl}}">link</a>
+<div *ngFor="let tool of tools">    
+    <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-1fm6" colspan="2"><a href="{{tool.toolUrl}}">{{tool.name}}</a></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-ibkn" colspan="2">
+                {{tool.description}},
+                media:{{tool.media}},
+                generate:{{tool.generate}},
+                editExisting:{{tool.editExisting}}
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-bltd">{{tool.free}}</td>
+            <td class="tg-7lxh">
+                <a href="{{tool.youtubeUrl}}"><img src="assets/YoutubeLogo.jpg" alt="Watch our youtube video about the service" width="45" height="30"></a>
+            </td>
+          </tr>
+        </tbody>
+        </table>
+        <br>
 </div>
+
+
+
+
+
+
+
 </div>
 

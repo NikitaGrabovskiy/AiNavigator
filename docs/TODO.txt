@@ -1,0 +1,16 @@
+
+
+
+By default it will select only 
+	Free
+	No installation
+	No registration
+
+
+
+
+
+
+
+1.Add registration needed 
+1.Add Installation needed
