@@ -10,7 +10,10 @@ export const TOOLMODELS =[
         media:Media.Image,
         editExisting:true,
         name:"IMAGE FREE service",
-        youtubeUrl:"https://www.youtube.com/"
+        youtubeUrl:"https://www.youtube.com/",
+        installationRequired:false,
+        registrationRequired:false
+
     },
     {
         description:"Test service description",
@@ -20,7 +23,9 @@ export const TOOLMODELS =[
         media:Media.Image,
         editExisting:true,
         name:"IMAGE Free version service",
-        youtubeUrl:"https://www.youtube.com/"
+        youtubeUrl:"https://www.youtube.com/",
+        installationRequired:false,
+        registrationRequired:false
     },
     {
         description:"Test service description",
@@ -30,7 +35,9 @@ export const TOOLMODELS =[
         media:Media.Image,
         editExisting:true,
         name:"IMAGE NOT FREE service",
-        youtubeUrl:"https://www.youtube.com/"
+        youtubeUrl:"https://www.youtube.com/",
+        installationRequired:false,
+        registrationRequired:false
     },
 
     {
@@ -41,7 +48,9 @@ export const TOOLMODELS =[
         media:Media.Sound,
         editExisting:true,
         name:"SOUND service",
-        youtubeUrl:"https://www.youtube.com/"
+        youtubeUrl:"https://www.youtube.com/",
+        installationRequired:false,
+        registrationRequired:false
     },
     {
         description:"Test service description",
@@ -51,7 +60,9 @@ export const TOOLMODELS =[
         media:Media.Text,
         editExisting:true,
         name:"TEXT service",
-        youtubeUrl:"https://www.youtube.com/"
+        youtubeUrl:"https://www.youtube.com/",
+        installationRequired:false,
+        registrationRequired:false
     },
     {
         description:"Test service description",
@@ -61,7 +72,9 @@ export const TOOLMODELS =[
         media:Media.Video,
         editExisting:true,
         name:"VIDEO service",
-        youtubeUrl:"https://www.youtube.com/"
+        youtubeUrl:"https://www.youtube.com/",
+        installationRequired:false,
+        registrationRequired:false
     },
     {
         description:"Test service description",
@@ -71,6 +84,8 @@ export const TOOLMODELS =[
         media:Media.Other,
         editExisting:true,
         name:"OTHER service",
-        youtubeUrl:"https://www.youtube.com/"
+        youtubeUrl:"https://www.youtube.com/",
+        installationRequired:false,
+        registrationRequired:false
     }
 ]

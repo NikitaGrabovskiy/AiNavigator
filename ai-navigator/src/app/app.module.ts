@@ -5,13 +5,19 @@ import { AppComponent } from './app.component';
 import { SearchAreaComponent } from './component/search-area/search-area.component';
 import { HeaderComponent } from './component/header/header.component';
 import { SearchOptionsBarComponent } from './component/search-options-bar/search-options-bar.component';
+import { SelectMediaTypeComponent } from './component/select-media-type/select-media-type.component';
+import { SelectOperationTypeComponent } from './component/select-operation-type/select-operation-type.component';
+import { FrontPageComponent } from './component/front-page/front-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchAreaComponent,
     SearchOptionsBarComponent,
-    HeaderComponent
+    HeaderComponent,
+    SelectMediaTypeComponent,
+    SelectOperationTypeComponent,
+    FrontPageComponent
   ],
   imports: [
     BrowserModule,

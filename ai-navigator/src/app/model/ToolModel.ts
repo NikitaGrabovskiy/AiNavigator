@@ -11,4 +11,6 @@ export interface ToolModel{
     editExisting:boolean,
     name:string,
     youtubeUrl:string
+    installationRequired:boolean,
+    registrationRequired:boolean
 }

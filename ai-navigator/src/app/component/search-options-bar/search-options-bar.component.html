@@ -1,39 +1,25 @@
-
-<style>
-  div.right {
-    position: relative;
-    width: 400px;
-    height: 200px;
-    border: 3px solid #73AD21;
-  } 
-  
-  div.absolute {
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 30%;
-    height: 100%;
-    border: 3px solid #73AD21;
-  }
-  </style>
-<ul>
+<div class="selectOptions">
+  <ul>
     Select media type :
     <br>
     <input type="checkbox" (change)="onSelectingImage()">Image
+    <br>
     <input type="checkbox" (change)="onSelectingSound()">Sound
+    <br>
     <input type="checkbox" (change)="onSelectingText()">Text
+    <br>
     <input type="checkbox" (change)="onSelectingVideo()">Video
+    <br>
     <input type="checkbox" (change)="onSelectingOther()">Other
 </ul>
-<br>
 <br>
 <ul>
     What are you trying to do?
     <br>
     <input type="checkbox" (change)="onSelectingGenerate()">Generate new content
+    <br>
     <input type="checkbox" (change)="onSelectingEdit()">Edit existing
 </ul>
-<br>
 <br>
   <input type="radio" id="Free" name="freeOptions" value="Free" (change)="onSelectingFree()">
   <label for="free">Free</label><br>
@@ -41,10 +27,24 @@
   <label for="FreeVersionAvailable">FreeVersionAvailable</label><br>  
   <input type="radio" id="All" name="freeOptions" value="All" (change)="onSelectingAll()">
   <label for="All">All</label>
-
+  <br> 
+  <br> 
+    Registration required:
+    <br> 
+  <input type="radio" id="regirstrationNotRequired" name="registrationOptions" value="true">
+  <label for="regirstrationNotRequired">No</label><br>
+  <input type="radio" id="regirstrationRequired" name="registrationOptions" value="false">
+  <label for="regirstrationRequired">Yes</label><br>
   <br>
-  <br>
-  
+  Installation required:
+  <br> 
+<input type="radio" id="installationNotRequired" name="installationOptions" value="true">
+<label for="installationNotRequired">No</label><br>
+<input type="radio" id="installationRequired" name="installationOptions" value="false">
+<label for="installationRequired">Yes</label><br>
+</div>
+<div class="selectResults">
+  <app-search-area [tools]="tools"></app-search-area>
+</div>
 
-<app-search-area [tools]="tools"></app-search-area>
 

@@ -1,7 +1,9 @@
 
 
 
-By default it will select only 
+1.Make search options for 2 new feels - and add test data for everything!
+
+1.By default it will select only 
 	Free
 	No installation
 	No registration
@@ -9,8 +11,33 @@ By default it will select only
 
 
 
+1.Show only ones that does not require any installation:
+1.Show only ones that does not require a registration
 
 
 
-1.Add registration needed 
-1.Add Installation needed
+
+1.Create a first page
+
+
+
+1. Make several different ways to find a service and run metrix to determine which one is best
+
+
+
+
+
+
+
+
+1.If there is nothing without registration - we writing a message 
+
+Sorry, there is no options with ought installation,
+Check free ones - that required registration:
+
+1.Same for installation:
+
+
+
+
+
