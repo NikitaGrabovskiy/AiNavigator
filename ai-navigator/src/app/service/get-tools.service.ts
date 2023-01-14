@@ -100,4 +100,14 @@ export class GetToolsService {
 
    return resultArray;
   }
+
+  addMedia(media:Media):void{
+    console.log("media selected!!!");
+    this.selectedMedia.push(media);
+  }
+
+
+
+
+
 }

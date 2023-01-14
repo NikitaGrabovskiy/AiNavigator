@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { GetToolsService } from 'src/app/service/get-tools.service';
+import { Media } from '../../enum/Media';
+import { Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-select-media-type',
@@ -7,9 +11,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectMediaTypeComponent implements OnInit {
 
-  constructor() { }
+  @Output() newItemEvent = new EventEmitter<boolean>();
+
+  getToolsService:GetToolsService;
+
+  constructor(getToolsService:GetToolsService) {
+    this.getToolsService=getToolsService;
+   }
 
   ngOnInit(): void {
+  }
+
+  onSelectingImage():void{
+    this.getToolsService.addMedia(Media.Image)
+    this.newItemEvent.emit(true);
+  }
+
+  onSelectingSound():void{
+    this.getToolsService.addMedia(Media.Sound)
+    this.newItemEvent.emit(true);
+  }
+
+  onSelectingText():void{
+    this.getToolsService.addMedia(Media.Text)
+    this.newItemEvent.emit(true);
+  }
+
+  onSelectingOther():void{
+    this.getToolsService.addMedia(Media.Other)
+    this.newItemEvent.emit(true);
   }
 
 }

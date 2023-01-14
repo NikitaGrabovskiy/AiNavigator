@@ -8,6 +8,7 @@ import { SearchOptionsBarComponent } from './component/search-options-bar/search
 import { SelectMediaTypeComponent } from './component/select-media-type/select-media-type.component';
 import { SelectOperationTypeComponent } from './component/select-operation-type/select-operation-type.component';
 import { FrontPageComponent } from './component/front-page/front-page.component';
+import { SpecificServicesComponent } from './component/specific-services/specific-services.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FrontPageComponent } from './component/front-page/front-page.component'
     HeaderComponent,
     SelectMediaTypeComponent,
     SelectOperationTypeComponent,
-    FrontPageComponent
+    FrontPageComponent,
+    SpecificServicesComponent
   ],
   imports: [
     BrowserModule,

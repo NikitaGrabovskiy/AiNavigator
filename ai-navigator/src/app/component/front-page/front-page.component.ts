@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit} from '@angular/core';
+import { GetToolsService } from 'src/app/service/get-tools.service';
+import { SelectMediaTypeComponent } from '../select-media-type/select-media-type.component';
 
 @Component({
   selector: 'app-front-page',
@@ -7,24 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FrontPageComponent implements OnInit {
 
-mediaSelected:boolean = false;
+
+mediaSelected:boolean = true;
 operationSelected:boolean = false;
+specificServicesSelected:boolean = false;
+showResults:boolean = false;
 
 
+ getToolsService:GetToolsService;
 
-
-  constructor() { }
+  constructor(getToolsService:GetToolsService) {
+    this.getToolsService=getToolsService;
+  }
 
   ngOnInit(): void {
-
   }
 
-  selectMedia (){
-    this.mediaSelected = true;
+  updateValues(updated:boolean):void{
+    console.log("valueUpdated !!!")
+    this.mediaSelected = this.getToolsService.selectedMedia.length == 0;
+    this.showResults = true;
   }
-
-  selectOperation (){
-    this.operationSelected = true;
-  }
-
 }

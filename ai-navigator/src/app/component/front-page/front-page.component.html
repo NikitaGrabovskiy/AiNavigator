@@ -1,5 +1,7 @@
 
 <div>
-    <app-select-media-type></app-select-media-type>
-    
+  <app-select-media-type (newItemEvent) = "updateValues($event)" *ngIf="mediaSelected"></app-select-media-type>
+  <app-select-operation-type *ngIf="operationSelected"></app-select-operation-type>
+  <app-specific-services *ngIf="specificServicesSelected"></app-specific-services>
+  <app-search-options-bar *ngIf="showResults"></app-search-options-bar>
  </div>

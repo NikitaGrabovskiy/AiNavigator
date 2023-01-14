@@ -1,10 +1,15 @@
-<div>
+<div class="mediaTypeOptions">
+    <div>
 
-    Select operation type:
-    <br>
-    <button type="button">Create new</button>
-    <br>
-    <button type="button">Edit existing</button>
-    <br>
-    <button type="button">Other</button>
- </div>
+        <p class="textFormat">What are you trying to do?</p>
+        <br>
+        <br>
+        <button type="button" class="myButton" (click)="onSelectingNew()">Create new</button>
+        <br>
+        <br>
+        <button type="button" class="myButton" (click)="onSelectingEdit()">Edit existing</button>
+        <br>
+        <br>
+        <button type="button" class="myButton" (click)="onSelectingOther()">Other</button>
+    </div>
+</div>
