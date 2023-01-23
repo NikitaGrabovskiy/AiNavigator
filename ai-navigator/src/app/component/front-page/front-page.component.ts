@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, OnInit} from '@angular/core';
 import { GetToolsService } from 'src/app/service/get-tools.service';
-import { SelectMediaTypeComponent } from '../select-media-type/select-media-type.component';
 
 @Component({
   selector: 'app-front-page',
@@ -28,6 +27,12 @@ showResults:boolean = false;
   updateValues(updated:boolean):void{
     console.log("valueUpdated !!!")
     this.mediaSelected = this.getToolsService.selectedMedia.length == 0;
-    this.showResults = true;
+    if(this.operationSelected == true){
+      this.operationSelected = false;
+      this.showResults = true;
+    }else{
+      this.operationSelected = true;
+    }
+    
   }
 }

@@ -1,34 +1,28 @@
+<div>  
+        <div class="singleTool" *ngFor="let tool of tools">  
+          <style type="text/css">
 
-
-
-
-<div>
-<div class="singleTool" *ngFor="let tool of tools">    
-    <table class="tg">
-        <thead>
-          <tr>
-            <th class="tg-1fm6" colspan="2"><a href="{{tool.toolUrl}}">{{tool.name}}</a></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="tg-ibkn" colspan="2">
-                {{tool.description}},
+          </style>
+          <table class="tg">
+          <thead>
+            <tr>
+              <td class="tg-8t2h" rowspan="4"><a href="{{tool.toolUrl}}"><img src="assets/images/{{tool.imageName}}.png" alt="Image" width="200" height="150"></a></td>
+              <td class="tg-t9nl"><a href="{{tool.toolUrl}}">{{tool.name}}</a></td>
+            </tr>
+            <tr>
+              <td class="tg-jwt7" rowspan="3"><span style="font-weight:bold">              
+                  {{tool.description}},
                 media:{{tool.media}},
                 generate:{{tool.generate}},
-                editExisting:{{tool.editExisting}}
-            </td>
-          </tr>
-          <tr>
-            <td class="tg-bltd">{{tool.free}}</td>
-            <td class="tg-7lxh">
-                <a href="{{tool.youtubeUrl}}"><img src="assets/YoutubeLogo.jpg" alt="Watch our youtube video about the service" width="45" height="30"></a>
-            </td>
-          </tr>
-        </tbody>
-        </table>
-        <br>
-</div>
+                editExisting:{{tool.editExisting}}</span></td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+          </thead>
+          </table></div>
+
 
 
 

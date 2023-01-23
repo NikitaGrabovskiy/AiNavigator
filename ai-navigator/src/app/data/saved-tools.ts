@@ -12,7 +12,53 @@ export const TOOLMODELS =[
         name:"IMAGE FREE service",
         youtubeUrl:"https://www.youtube.com/",
         installationRequired:false,
-        registrationRequired:false
+        registrationRequired:false,
+        imageName:"test",
+        tags:["generative art","create art"]
+
+    },
+    {
+        description:"Test service description",
+        free:FreeOption.Free,
+        generate:true,
+        toolUrl:"https://www.youtube.com/",
+        media:Media.Image,
+        editExisting:false,
+        name:"IMAGE FREE service",
+        youtubeUrl:"https://www.youtube.com/",
+        installationRequired:false,
+        registrationRequired:false,
+        imageName:"test",
+        tags:[]
+
+    },
+    {
+        description:"Test service description",
+        free:FreeOption.Free,
+        generate:false,
+        toolUrl:"https://www.youtube.com/",
+        media:Media.Image,
+        editExisting:true,
+        name:"IMAGE FREE service",
+        youtubeUrl:"https://www.youtube.com/",
+        installationRequired:false,
+        registrationRequired:false,
+        imageName:"test",
+        tags:[]
+    },
+        {
+        description:"Test service description",
+        free:FreeOption.Free,
+        generate:true,
+        toolUrl:"https://www.youtube.com/",
+        media:Media.Image,
+        editExisting:true,
+        name:"IMAGE FREE service",
+        youtubeUrl:"https://www.youtube.com/",
+        installationRequired:false,
+        registrationRequired:false,
+        imageName:"test",
+        tags:[]
 
     },
     {
@@ -25,7 +71,9 @@ export const TOOLMODELS =[
         name:"IMAGE Free version service",
         youtubeUrl:"https://www.youtube.com/",
         installationRequired:false,
-        registrationRequired:false
+        registrationRequired:false,
+        imageName:"test",
+        tags:[]
     },
     {
         description:"Test service description",
@@ -37,12 +85,14 @@ export const TOOLMODELS =[
         name:"IMAGE NOT FREE service",
         youtubeUrl:"https://www.youtube.com/",
         installationRequired:false,
-        registrationRequired:false
+        registrationRequired:false,
+        imageName:"test",
+        tags:[]
     },
 
     {
         description:"Test service description",
-        free:FreeOption.FreeVersionAvailable,
+        free:FreeOption.Free,
         generate:true,
         toolUrl:"https://www.youtube.com/",
         media:Media.Sound,
@@ -50,11 +100,13 @@ export const TOOLMODELS =[
         name:"SOUND service",
         youtubeUrl:"https://www.youtube.com/",
         installationRequired:false,
-        registrationRequired:false
+        registrationRequired:false,
+        imageName:"test",
+        tags:[]
     },
     {
         description:"Test service description",
-        free:FreeOption.FreeVersionAvailable,
+        free:FreeOption.Free,
         generate:true,
         toolUrl:"https://www.youtube.com/",
         media:Media.Text,
@@ -62,7 +114,37 @@ export const TOOLMODELS =[
         name:"TEXT service",
         youtubeUrl:"https://www.youtube.com/",
         installationRequired:false,
-        registrationRequired:false
+        registrationRequired:false,
+        imageName:"test",
+        tags:[]
+    },
+    {
+        description:"Test service description",
+        free:FreeOption.FreeVersionAvailable,
+        generate:true,
+        toolUrl:"https://www.youtube.com/",
+        media:Media.Text,
+        editExisting:false,
+        name:"TEXT service",
+        youtubeUrl:"https://www.youtube.com/",
+        installationRequired:false,
+        registrationRequired:false,
+        imageName:"test",
+        tags:[]
+    },
+    {
+        description:"Test service description",
+        free:FreeOption.Free,
+        generate:false,
+        toolUrl:"https://www.youtube.com/",
+        media:Media.Text,
+        editExisting:true,
+        name:"TEXT service",
+        youtubeUrl:"https://www.youtube.com/",
+        installationRequired:false,
+        registrationRequired:false,
+        imageName:"test",
+        tags:[]
     },
     {
         description:"Test service description",
@@ -74,11 +156,13 @@ export const TOOLMODELS =[
         name:"VIDEO service",
         youtubeUrl:"https://www.youtube.com/",
         installationRequired:false,
-        registrationRequired:false
+        registrationRequired:false,
+        imageName:"test",
+        tags:[]
     },
     {
         description:"Test service description",
-        free:FreeOption.FreeVersionAvailable,
+        free:FreeOption.Free,
         generate:true,
         toolUrl:"https://www.youtube.com/",
         media:Media.Other,
@@ -86,6 +170,8 @@ export const TOOLMODELS =[
         name:"OTHER service",
         youtubeUrl:"https://www.youtube.com/",
         installationRequired:false,
-        registrationRequired:false
-    }
+        registrationRequired:false,
+        imageName:"test",
+        tags:[]
+    },
 ]

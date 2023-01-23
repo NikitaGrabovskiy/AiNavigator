@@ -10,13 +10,11 @@ import { Media } from '../enum/Media';
 export class GetToolsService {
 
   freeOnly:boolean = true;
-  selectNotFree:boolean = true;
-
-
-  generate:boolean = true;
-  freeVersionAvailable: boolean = true;
+  selectNotFree:boolean = false;
+  generate:boolean = false;
+  editExisting:boolean = false;
+  freeVersionAvailable: boolean = false;
   selectedMedia:Media[] = [];
-  editExisting:boolean = true;
 
   selectedTools:ToolModel[]=TOOLMODELS;
 
@@ -40,12 +38,12 @@ export class GetToolsService {
   }
 
   selectOrUnselectEdit():ToolModel[]{
-    this.editExisting==!this.editExisting;
+    this.editExisting=!this.editExisting;
     return this.getSelectedTools();
   }
 
   selectOrUnselectGenerate():ToolModel[]{
-    this.generate==!this.generate;
+    this.generate=!this.generate;
     return this.getSelectedTools();
   }
 
@@ -72,28 +70,27 @@ export class GetToolsService {
   }
 
 
-  
-
   getSelectedTools():ToolModel[]{
-
+    
     let allTools:ToolModel[]=TOOLMODELS;
     let resultArray:ToolModel[]=[];
 
-    console.log("this.freeOnly " + this.freeOnly);
-    console.log("this.freeVersionAvailable"+this.freeVersionAvailable);
-    console.log("this.selectNotFree"+this.selectNotFree);
+    //console.log("this.freeOnly " + this.freeOnly);
+    //console.log("this.freeVersionAvailable"+this.freeVersionAvailable);
+    //console.log("this.selectNotFree"+this.selectNotFree);
 
+    //console.log("All tools"+ allTools[0].generate);
     allTools.forEach((tool:ToolModel,index:number)=>{
       if(this.selectedMedia.find(x => x === tool.media) != undefined 
-      && tool.editExisting == this.editExisting
-      && tool.generate == this.generate 
+      && ((tool.editExisting == this.editExisting && tool.editExisting ==true)
+      || (tool.generate == this.generate && tool.generate == true) )
 
-      // Free option logic
+       //Free option logic
 
-      &&((this.freeOnly && tool.free==FreeOption.Free)
-      || (this.freeVersionAvailable&&(tool.free==FreeOption.Free
-              ||tool.free==FreeOption.FreeVersionAvailable)
-      ||this.selectNotFree))
+      //&&((this.freeOnly && tool.free==FreeOption.Free)
+     //|| (this.freeVersionAvailable&&(tool.free==FreeOption.Free
+     //         ||tool.free==FreeOption.FreeVersionAvailable)
+    //  ||this.selectNotFree))
       
       ) resultArray.push(allTools[index]);
     })
@@ -102,12 +99,23 @@ export class GetToolsService {
   }
 
   addMedia(media:Media):void{
-    console.log("media selected!!!");
     this.selectedMedia.push(media);
   }
 
 
 
+  getToolsWithSelectedTag(tag:string){
 
+    let allTools:ToolModel[]=TOOLMODELS;
+    let resultArray:ToolModel[]=[];
+
+    allTools.forEach((tool:ToolModel,index:number)=>{
+      if(tool.tags.includes(tag)){
+        resultArray.push(allTools[index]);
+      } 
+    })
+
+   this.selectedTools = resultArray;
+  }
 
 }

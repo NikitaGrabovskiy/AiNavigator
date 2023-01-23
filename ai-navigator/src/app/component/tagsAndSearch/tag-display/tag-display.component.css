@@ -1,0 +1,10 @@
+div.tagsDisplay {
+    position: absolute;
+    top:30%;
+    left: 88.5%;
+    width: 11%;
+}
+
+div.tags{
+    border: 3px solid #66d4cd;
+}

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { GetToolsService } from 'src/app/service/get-tools.service';
 
 @Component({
   selector: 'app-select-operation-type',
@@ -9,30 +10,23 @@ export class SelectOperationTypeComponent implements OnInit {
 
   @Output() newItemEvent = new EventEmitter<boolean>();
 
-  selectedNew:boolean = false;
-  selectedEdit:boolean = false;
-  selectedOther:boolean = false;
+  getToolsService:GetToolsService;
 
-  constructor() { }
+  constructor(getToolsService:GetToolsService) {
+    
+    this.getToolsService = getToolsService;
+   }
 
   ngOnInit(): void {
   }
 
-
   onSelectingNew():void{
-    this.selectedNew = true;
+    this.getToolsService.generate = true;
     this.newItemEvent.emit(true);
   }
 
   onSelectingEdit():void{
-    this.selectedEdit = true;
+    this.getToolsService.editExisting = true;
     this.newItemEvent.emit(true);
   }
-
-
-  onSelectingOther():void{
-    this.selectedOther= true;
-    this.newItemEvent.emit(true);
-  }
-
 }

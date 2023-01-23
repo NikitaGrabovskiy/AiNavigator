@@ -37,6 +37,11 @@ export class SelectMediaTypeComponent implements OnInit {
     this.newItemEvent.emit(true);
   }
 
+  onSelectingVideo():void{
+    this.getToolsService.addMedia(Media.Video)
+    this.newItemEvent.emit(true);
+  }
+
   onSelectingOther():void{
     this.getToolsService.addMedia(Media.Other)
     this.newItemEvent.emit(true);

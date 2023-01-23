@@ -1,16 +1,15 @@
   
 div.selectOptions {
     position: absolute;
-    top: 5px;;
-    left: ;
+    top: 10%;
     width: 20%;
 
 
 }
 div.selectResults {
     position: absolute;
-    top:0;
-    left: 20%;
+    top:15%;
+    left: 18%;
     width: 70%;
     min-height: 100%;
     height: scrool;

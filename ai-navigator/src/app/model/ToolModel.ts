@@ -12,5 +12,7 @@ export interface ToolModel{
     name:string,
     youtubeUrl:string
     installationRequired:boolean,
-    registrationRequired:boolean
+    registrationRequired:boolean,
+    imageName:string,
+    tags:string []
 }

@@ -5,3 +5,15 @@
  I am doing page - do anything online 
 			1)for free
 			2)without registration
+
+
+
+FIRST RELEASE criteria:
+
+	1) Working and tested functionality
+	2) At lease 100 websites
+	3) First release will not include anything that not free, need installation or registration
+	
+	DO it as soon as possible.
+
+

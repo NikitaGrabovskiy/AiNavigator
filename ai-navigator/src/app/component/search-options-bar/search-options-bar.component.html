@@ -2,26 +2,29 @@
   <ul>
     Select media type :
     <br>
-    <input type="checkbox" (change)="onSelectingImage()">Image
+    <input type="checkbox"  [checked]="defaultImageSelectedChecked"  (change)="onSelectingImage()">Image
     <br>
-    <input type="checkbox" (change)="onSelectingSound()">Sound
+    <input type="checkbox" [checked]="defaultSoundSelectedChecked" (change)="onSelectingSound()">Sound
     <br>
-    <input type="checkbox" (change)="onSelectingText()">Text
+    <input type="checkbox"  [checked]="defaultTextSelectedChecked" (change)="onSelectingText()">Text
     <br>
-    <input type="checkbox" (change)="onSelectingVideo()">Video
+    <input type="checkbox"  [checked]="defaultVideoSelectedChecked" (change)="onSelectingVideo()">Video
     <br>
-    <input type="checkbox" (change)="onSelectingOther()">Other
+    <input type="checkbox" [checked]="defaultOtherSelectedChecked" (change)="onSelectingOther()">Other
 </ul>
 <br>
 <ul>
-    What are you trying to do?
-    <br>
-    <input type="checkbox" (change)="onSelectingGenerate()">Generate new content
-    <br>
-    <input type="checkbox" (change)="onSelectingEdit()">Edit existing
+  What are you trying to do?
+  <br>
+  <input type="checkbox" [checked]="defaultGenerateSelectedChecked" (change)="onSelectingGenerate()">Generate new content
+  <br>
+  <input type="checkbox" [checked]="defaultEditSelectedChecked" (change)="onSelectingEdit()">Edit existing
 </ul>
+
+<div hidden="true">
+
 <br>
-  <input type="radio" id="Free" name="freeOptions" value="Free" (change)="onSelectingFree()">
+  <input type="radio" id="Free" name="freeOptions" value="Free" [checked]="true" (change)="onSelectingFree()">
   <label for="free">Free</label><br>
   <input type="radio" id="FreeVersionAvailable" name="freeOptions" value="FreeVersionAvailable" (change)="onSelectingFreeVersion()">
   <label for="FreeVersionAvailable">FreeVersionAvailable</label><br>  
@@ -31,20 +34,28 @@
   <br> 
     Registration required:
     <br> 
-  <input type="radio" id="regirstrationNotRequired" name="registrationOptions" value="true">
+  <input type="radio" id="regirstrationNotRequired" name="registrationOptions" [checked]="true" value="true">
   <label for="regirstrationNotRequired">No</label><br>
   <input type="radio" id="regirstrationRequired" name="registrationOptions" value="false">
   <label for="regirstrationRequired">Yes</label><br>
   <br>
   Installation required:
   <br> 
-<input type="radio" id="installationNotRequired" name="installationOptions" value="true">
+<input type="radio" id="installationNotRequired" name="installationOptions" [checked]="true" value="true">
 <label for="installationNotRequired">No</label><br>
 <input type="radio" id="installationRequired" name="installationOptions" value="false">
 <label for="installationRequired">Yes</label><br>
 </div>
-<div class="selectResults">
-  <app-search-area [tools]="tools"></app-search-area>
 </div>
 
+
+
+
+
+<div class="selectResults">
+  <app-search-area [tools]="tools" ></app-search-area>
+</div>
+
+<app-search-by-word ></app-search-by-word>
+<app-tag-display ></app-tag-display>
 

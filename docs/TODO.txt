@@ -1,14 +1,9 @@
-
-
-
 1.Make search options for 2 new feels - and add test data for everything!
 
 1.By default it will select only 
 	Free
 	No installation
 	No registration
-
-
 
 
 1.Show only ones that does not require any installation:
@@ -20,14 +15,7 @@
 1.Create a first page
 
 
-
 1. Make several different ways to find a service and run metrix to determine which one is best
-
-
-
-
-
-
 
 
 1.If there is nothing without registration - we writing a message 
@@ -38,6 +26,23 @@ Check free ones - that required registration:
 1.Same for installation:
 
 
+1. Add photo to selected tool and remove YouTube video for now
+
+1.Add 3D model and Video
+
+1.Add tags to each service and add most popular tags in the 
+
+1.Add search by description and tags
+
+1.Add a way - may be several ways for people to suggest tools to add to the site or to leave their feedback and suggestions
+
+
+1. The search results should be in 2 columns - it should include big picture with service
+And you can go to service by clicking to Picture or name
+
+1.Then person click to a new service - we should open it in a new window - so our application would not close
+
+1.Add a separate page where you can see all the tags
 
 
 

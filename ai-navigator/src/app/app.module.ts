@@ -9,6 +9,8 @@ import { SelectMediaTypeComponent } from './component/select-media-type/select-m
 import { SelectOperationTypeComponent } from './component/select-operation-type/select-operation-type.component';
 import { FrontPageComponent } from './component/front-page/front-page.component';
 import { SpecificServicesComponent } from './component/specific-services/specific-services.component';
+import { TagDisplayComponent } from './component/tagsAndSearch/tag-display/tag-display.component';
+import { SearchByWordComponent } from './component/tagsAndSearch/search-by-word/search-by-word.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SpecificServicesComponent } from './component/specific-services/specifi
     SelectMediaTypeComponent,
     SelectOperationTypeComponent,
     FrontPageComponent,
-    SpecificServicesComponent
+    SpecificServicesComponent,
+    TagDisplayComponent,
+    SearchByWordComponent
   ],
   imports: [
     BrowserModule,
