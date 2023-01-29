@@ -1,24 +1,29 @@
 <div class="selectOptions">
   <ul>
-    Select media type :
+    <div class="selectOptionsHeader">Select media type :</div>
     <br>
-    <input type="checkbox"  [checked]="defaultImageSelectedChecked"  (change)="onSelectingImage()">Image
+    <div class="checkbox">
+      <input type="checkbox" [checked]="defaultImageSelectedChecked"  (change)="onSelectingImage()"> Image
     <br>
-    <input type="checkbox" [checked]="defaultSoundSelectedChecked" (change)="onSelectingSound()">Sound
+    <input type="checkbox" [checked]="defaultSoundSelectedChecked" (change)="onSelectingSound()"> Sound
     <br>
-    <input type="checkbox"  [checked]="defaultTextSelectedChecked" (change)="onSelectingText()">Text
+    <input type="checkbox"  [checked]="defaultTextSelectedChecked" (change)="onSelectingText()"> Text
     <br>
-    <input type="checkbox"  [checked]="defaultVideoSelectedChecked" (change)="onSelectingVideo()">Video
+    <input type="checkbox"  [checked]="defaultVideoSelectedChecked" (change)="onSelectingVideo()"> Video
     <br>
-    <input type="checkbox" [checked]="defaultOtherSelectedChecked" (change)="onSelectingOther()">Other
+    <input type="checkbox" [checked]="defaultOtherSelectedChecked" (change)="onSelectingOther()"> Other
+
+  </div>
 </ul>
 <br>
 <ul>
-  What are you trying to do?
+  <div class="selectOptionsHeader">What are you trying to do?</div>
   <br>
-  <input type="checkbox" [checked]="defaultGenerateSelectedChecked" (change)="onSelectingGenerate()">Generate new content
+  <div class="checkbox">
+  <input type="checkbox" [checked]="defaultGenerateSelectedChecked" (change)="onSelectingGenerate()"> Generate new content
   <br>
-  <input type="checkbox" [checked]="defaultEditSelectedChecked" (change)="onSelectingEdit()">Edit existing
+  <input type="checkbox" [checked]="defaultEditSelectedChecked" (change)="onSelectingEdit()"> Edit existing
+  </div>
 </ul>
 
 <div hidden="true">
@@ -56,6 +61,6 @@
   <app-search-area [tools]="tools" ></app-search-area>
 </div>
 
-<app-search-by-word ></app-search-by-word>
-<app-tag-display ></app-tag-display>
+<app-search-by-word (parentFunction)="parentFunction($event)"></app-search-by-word>
+<app-tag-display (parentFunction)="parentFunction($event)" ></app-tag-display>
 

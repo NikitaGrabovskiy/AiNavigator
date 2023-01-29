@@ -1,11 +1,8 @@
 <div class="tagsDisplay">
-        <p>Popular tags:</p>
+<div class="tagsHeader">Popular tags :</div>
         <br>
         <div class="tags">
                 <button *ngFor="let tag of tagsOfSelectedMedia" type="button" class="tagButton" (click)="selectTag(tag)">{{tag}}</button>
         </div>
-        
-
-        <br>
-        <button  type="button" >See all tags</button>
 </div>
+

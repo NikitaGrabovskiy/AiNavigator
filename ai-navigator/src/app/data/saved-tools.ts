@@ -29,7 +29,7 @@ export const TOOLMODELS =[
         installationRequired:false,
         registrationRequired:false,
         imageName:"test",
-        tags:[]
+        tags:["interactive art"]
 
     },
     {

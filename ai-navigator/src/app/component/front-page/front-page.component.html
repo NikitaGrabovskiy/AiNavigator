@@ -1,8 +1,6 @@
 
 <div>
   <app-header></app-header>
-  <app-search-by-word *ngIf="showResults"></app-search-by-word>
-  <app-tag-display *ngIf="showResults"></app-tag-display>
   <app-select-media-type (newItemEvent) = "updateValues($event)" *ngIf="mediaSelected"></app-select-media-type>
   <app-select-operation-type (newItemEvent) = "updateValues($event)" *ngIf="operationSelected"></app-select-operation-type>
   <app-specific-services *ngIf="specificServicesSelected"></app-specific-services>

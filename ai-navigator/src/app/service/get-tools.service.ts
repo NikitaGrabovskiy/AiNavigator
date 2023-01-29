@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ToolModel } from 'src/app/model/ToolModel';
 import {TOOLMODELS} from '../data/saved-tools';
-import { FreeOption } from '../enum/FreeOption';
 import { Media } from '../enum/Media';
 
 @Injectable({
@@ -17,6 +16,9 @@ export class GetToolsService {
   selectedMedia:Media[] = [];
 
   selectedTools:ToolModel[]=TOOLMODELS;
+  selectedTag:string ="";
+
+  searchText:string="";
 
   constructor() { }
 
@@ -75,6 +77,26 @@ export class GetToolsService {
     let allTools:ToolModel[]=TOOLMODELS;
     let resultArray:ToolModel[]=[];
 
+    console.log("inside getSelectedTools()")
+    console.log("search text " + this.searchText )
+
+    //Select by keywords
+    if(this.searchText!=""){
+      resultArray = this.getToolsBySearchWord();
+      this.searchText="";
+
+      console.log("resultArray = "+ resultArray)
+      return resultArray;
+    }
+
+    // Select by tags
+    if(this.selectedTag != ""){
+
+      resultArray = this.getToolsWithSelectedTag()
+      this.selectedTag =""
+      return resultArray;
+    }
+
     //console.log("this.freeOnly " + this.freeOnly);
     //console.log("this.freeVersionAvailable"+this.freeVersionAvailable);
     //console.log("this.selectNotFree"+this.selectNotFree);
@@ -102,20 +124,39 @@ export class GetToolsService {
     this.selectedMedia.push(media);
   }
 
-
-
-  getToolsWithSelectedTag(tag:string){
+  getToolsWithSelectedTag():ToolModel[]{
 
     let allTools:ToolModel[]=TOOLMODELS;
     let resultArray:ToolModel[]=[];
 
     allTools.forEach((tool:ToolModel,index:number)=>{
-      if(tool.tags.includes(tag)){
+      if(tool.tags.includes(this.selectedTag)){
         resultArray.push(allTools[index]);
       } 
     })
 
-   this.selectedTools = resultArray;
+   return this.selectedTools = resultArray;
   }
 
+  getToolsBySearchWord():ToolModel[]{
+
+    let allTools:ToolModel[]=TOOLMODELS;
+    let resultArray:ToolModel[]=[];
+
+    this.searchText = this.searchText.toLocaleLowerCase();
+
+    // Check if Name or description or tag contains search word
+    allTools.forEach((tool:ToolModel,index:number)=>{
+
+    if((tool.name.toLowerCase().includes(this.searchText) )
+    || (tool.description.toLowerCase().includes(this.searchText))
+    || (tool.tags.filter(tag=>tag.toLowerCase().includes(this.searchText)).length!=0)
+      ) resultArray.push(allTools[index]);
+    })
+
+    // ADD check for tags
+
+    return resultArray;
+  }
+  
 }

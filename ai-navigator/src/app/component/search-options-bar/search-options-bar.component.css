@@ -2,9 +2,7 @@
 div.selectOptions {
     position: absolute;
     top: 10%;
-    width: 20%;
-
-
+    width: 18%;
 }
 div.selectResults {
     position: absolute;
@@ -14,4 +12,15 @@ div.selectResults {
     min-height: 100%;
     height: scrool;
     border: 3px solid #21ada4;
+}
+
+div.selectOptionsHeader{
+    width: 80;
+    background-color: #82eee7;
+    padding-left: 7%;
+}
+
+div.checkbox{
+    background-color: #d5f4f2; 
+    padding-left: 7%;
 }

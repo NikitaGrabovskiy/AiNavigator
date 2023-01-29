@@ -46,3 +46,8 @@ And you can go to service by clicking to Picture or name
 
 
 
+
+BUG - after search by word - selecting checkbox for media type and operation type are not working 
+
+
+

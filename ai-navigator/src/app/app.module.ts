@@ -11,6 +11,7 @@ import { FrontPageComponent } from './component/front-page/front-page.component'
 import { SpecificServicesComponent } from './component/specific-services/specific-services.component';
 import { TagDisplayComponent } from './component/tagsAndSearch/tag-display/tag-display.component';
 import { SearchByWordComponent } from './component/tagsAndSearch/search-by-word/search-by-word.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { SearchByWordComponent } from './component/tagsAndSearch/search-by-word/
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

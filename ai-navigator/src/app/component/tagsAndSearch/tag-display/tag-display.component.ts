@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Media } from 'src/app/enum/Media';
 import { GetToolsService } from 'src/app/service/get-tools.service';
 
@@ -9,9 +9,9 @@ import { GetToolsService } from 'src/app/service/get-tools.service';
 })
 export class TagDisplayComponent implements OnInit {
 
+  @Output() parentFunction:EventEmitter<any> = new EventEmitter();
 
-
-  // TODO: Add saparate list of tags for Edit and for generate (10 total)
+  // TODO: Add saparate list of tags for Edit and for generate (20 total)
   imageTags:string [] = ["generative art","interactive art","generate image","remove something from imaga"];
   soundTags:string [] = ["generate music","change voice"];
   textTags:string [] = ["generate random text"];
@@ -44,8 +44,8 @@ export class TagDisplayComponent implements OnInit {
   }
 
   selectTag(tag:string):void{
-    this.getToolsService.getToolsWithSelectedTag(tag);
-    console.log(this.getToolsService.selectedTools)
+    this.getToolsService.selectedTag = tag;
+    this.parentFunction.emit("Event"); 
   }
 
 }

@@ -79,12 +79,13 @@ export class SearchOptionsBarComponent implements OnInit{
     this.tools = this.getToolsService.selectFreeVersionAvailable();
   }
 
-    onSelectingAll():void{
+  onSelectingAll():void{
       this.tools = this.getToolsService.selectNotFreeOption();
   }
 
-  parentFunction(data:any):void{
 
+  parentFunction(data:any):void{
+    this.tools = [];
   }
   
 }

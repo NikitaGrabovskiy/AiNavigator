@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
+import { GetToolsService } from 'src/app/service/get-tools.service';
 
 @Component({
   selector: 'app-search-by-word',
@@ -7,11 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchByWordComponent implements OnInit {
 
-  constructor() { }
+  @Output() parentFunction:EventEmitter<any> = new EventEmitter();
+
+  @Output()
+  searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
+
+  enteredSearchValue: string = "";
+
+  getToolsService:GetToolsService;
+
+  constructor(getToolsService:GetToolsService) { 
+    this.getToolsService=getToolsService; 
+  }
 
   ngOnInit(): void {
   }
 
-
+  onSearchTextChanged(){
+    this.searchTextChanged.emit(this.enteredSearchValue);
+    this.getToolsService.searchText=this.enteredSearchValue;
+    this.parentFunction.emit("Event"); 
+  }
 
 }
